@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  back-db:
+    image: postgres
+    container_name: back_db
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=schahid
+      - POSTGRES_PASSWORD=1337
+      - POSTGRES_DB=postgres_db
+    networks:
+      - net1
+
+networks:
+  net1:
